@@ -14,18 +14,6 @@ class Display
     @turn = nil
   end
 
-  def get_words(word_file)
-    words_array = []
-    @array_of_words = []
-
-    word_file.each do |word|
-      if word.length.between?(5,12)
-        words_array << word
-      end
-    end
-    @array_of_words = words_array
-  end
-
   def get_new_word
     
   end
@@ -75,10 +63,21 @@ class Display
     from_json(contents)
   end
 
+  def get_words(word_file)
+
+    word_file.each do |word|
+      if word.length.between?(5,12)
+        @array_of_words << word
+      end
+    end
+  end
+
   def get_secret_word(word_file)
+    puts "array of words: #{array_of_words}"
     get_words(word_file)
+    puts "array of words: #{array_of_words}"
     index = rand(0..array_of_words.length)
-    # puts "Array of words length: #{array_of_words.length}"
+    puts "Array of words length: #{array_of_words.length}"
     @secret_word = array_of_words[index].chomp
     @secret_word = word_to_array
   end

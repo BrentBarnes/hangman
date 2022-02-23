@@ -25,4 +25,3 @@ game = Game.new(Display.new)
 
 game.play(word_file)
 replay(game, word_file)
-# game.load_game

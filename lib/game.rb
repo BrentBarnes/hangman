@@ -14,35 +14,6 @@ class Game
     @game_over = false
   end
 
-  # def to_yaml
-  #   YAML.dump ({
-  #     :display => @display,
-  #     # :game_over => @game_over
-  #   })
-  # end
-
-  # def save_game
-  #   save_file = File.open("save_file.txt", "w")
-  #   save_file.write to_yaml
-  #   save_file.close
-  # end
-
-  # def from_yaml(string)
-  #   data = YAML.load string
-  #   # p data
-  #   # display.board = data[@board]
-  #   # display.secret_word = data[@secret_word]
-  #   # display.turn = data[@turn]
-  #   p data[@board]
-  # end
-
-  # def load_game
-  #   file = File.open("save_file.txt", "r")
-  #   contents = file.read
-
-  #   from_yaml(contents)
-  # end
-
   def intro_input(word_file)
     input = gets.chomp
 
@@ -110,11 +81,3 @@ class Game
     end
   end
 end
-
-
-#TO-DO:
-#Figure out replay 'y'
-#For some reason, display.rb array_of_words.length returns 0
-#on replay.
-#save and quit method
-#load and play method
