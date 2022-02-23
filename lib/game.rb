@@ -49,7 +49,7 @@ class Game
     if input == 'new'
       display.get_secret_word(word_file)
       display.intro_text
-      puts display.starting_board
+      display.starting_board
     elsif input == 'load'
       display.load_game
     else
@@ -82,7 +82,6 @@ class Game
       puts "No letter found."
       display.turn -= 1
     end
-    puts display.board.join(' ')
   end
 
   def turn
@@ -112,6 +111,7 @@ class Game
 end
 
 
+#TO-DO:
 #Figure out replay 'y'
 #For some reason, display.rb array_of_words.length returns 0
 #on replay.

@@ -1,20 +1,18 @@
 ---
 :secret_word:
-- a
-- c
+- s
 - h
-- i
+- o
+- r
+- t
 - e
-- v
-- e
-- d
+- r
 :board:
-- a
+- s
+- _
+- o
 - _
 - _
-- i
 - e
-- v
-- e
 - _
-:turn: 3
+:turn: 4
