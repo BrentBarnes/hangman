@@ -1,6 +1,8 @@
 
 word_file = File.open('google-10000-english-no-swears.txt', "r")
 
+require 'yaml'
+require 'json'
 require_relative 'game.rb'
 require_relative 'display.rb'
 

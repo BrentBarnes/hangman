@@ -94,6 +94,7 @@ class Game
   def game_status
     if display.board.exclude?('_')
       @game_over = true
+      puts display.board.join(' ')
       puts "YOU WIN! You guessed the evil computer's secret word!"
     elsif display.turn == 0
       @game_over = true

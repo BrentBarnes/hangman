@@ -1,18 +1,1 @@
----
-:secret_word:
-- s
-- h
-- o
-- r
-- t
-- e
-- r
-:board:
-- s
-- _
-- o
-- _
-- _
-- e
-- _
-:turn: 4
+{"secret_word":["p","e","r","f","o","r","m","e","r"],"board":["_","e","r","_","_","r","_","e","r"],"turn":7}

@@ -1,4 +1,6 @@
 
+require 'json'
+require 'yaml'
 word_file = File.open('google-10000-english-no-swears.txt', "r")
 
 class Display
@@ -36,12 +38,6 @@ class Display
     })
   end
 
-  def save_game
-    save_file = File.open("save_file.txt", "w")
-    save_file.write to_yaml
-    save_file.close
-  end
-
   def from_yaml(string)
     data = YAML.load string
     data
@@ -50,11 +46,33 @@ class Display
     @turn = data[:turn]
   end
 
+  def to_json
+    JSON.dump ({
+      :secret_word => @secret_word,
+      :board => @board,
+      :turn => @turn      
+    })
+  end
+
+  def from_json(string)
+    data = JSON.load string
+    data
+    @secret_word = data["secret_word"]
+    @board = data["board"]
+    @turn = data["turn"]
+  end
+
+  def save_game
+    save_file = File.open("save_file.txt", "w")
+    save_file.write to_json
+    save_file.close
+  end
+
   def load_game
     file = File.open("save_file.txt", "r")
     contents = file.read
 
-    from_yaml(contents)
+    from_json(contents)
   end
 
   def get_secret_word(word_file)
