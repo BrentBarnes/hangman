@@ -1,4 +1,20 @@
-# hangman
+# Hangman
+
+The goal of this project was to create a CLI hangman game that imports 10,000 possible words and has a saving feature.
+
+### Functionality
+
+* Player is able to <strong>save</strong> the game at any point and <strong>load</strong> it from the start screen later
+* The game imports 10,000 words from a .txt file
+* The computer chooses a random word from the .txt file as the secret word
+* Player can guess if a letter is included in the secret word
+* Player loses if they take too many guesses
+
+### Screenshot
+
+![Win Screen Screen Shot](hangman.png)
+
+### Reflections After Completion
 
 Hangman felt like an improvement from my last project. The easiest part was actually building the game. I feel like mastermind was pretty complex. In comparison, hangman isn't all that complicated.
 
