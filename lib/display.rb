@@ -73,11 +73,8 @@ class Display
   end
 
   def get_secret_word(word_file)
-    puts "array of words: #{array_of_words}"
     get_words(word_file)
-    puts "array of words: #{array_of_words}"
     index = rand(0..array_of_words.length)
-    puts "Array of words length: #{array_of_words.length}"
     @secret_word = array_of_words[index].chomp
     @secret_word = word_to_array
   end

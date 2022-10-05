@@ -14,6 +14,8 @@ The goal of this project was to create a CLI hangman game that imports 10,000 po
 
 ![Win Screen Screen Shot](hangman.png)
 
+<strong>Play the live demo [HERE](https://replit.com/@brenttbarness/Hangman-Ruby-CLI-Game?v=1)!</strong>
+
 ### Reflections After Completion
 
 Hangman felt like an improvement from my last project. The easiest part was actually building the game. I feel like mastermind was pretty complex. In comparison, hangman isn't all that complicated.
